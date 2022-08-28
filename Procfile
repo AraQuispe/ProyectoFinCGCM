@@ -1,0 +1,1 @@
+web: gunicorn Como_Estas.wsgi --log-file -
