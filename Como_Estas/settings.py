@@ -50,19 +50,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Como_Estas.wsgi.application'
 
-#DATABASES = {
-#    'default': {
- #       'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
-import dj_database_url
-from decouple import config
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+#import dj_database_url
+#from decouple import config
+#DATABASES = {
+#    'default': dj_database_url.config(
+#        default=config('DATABASE_URL')
+#    )
+#}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
